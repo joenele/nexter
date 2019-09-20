@@ -432,3 +432,5 @@ body {
   margin-left: auto;
   text-align: center;
   width: 70%; }
+  .copyright a {
+    color: #aaa; }
