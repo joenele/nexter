@@ -1,0 +1,31 @@
+.features {
+    grid-column: center-start / center-end;
+
+    margin: 15rem 0;
+
+    display:grid;
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); //allows as many grid tracks to fit within the container
+    grid-gap: 6rem;
+    align-items: start; //moves text content all the way to the top of the grid cell
+}
+
+.feature {
+
+    display:grid;
+    grid-template-columns: min-content 1fr; //aligns icon in their own grid to the left of text
+    grid-row-gap: 1.5rem; //creates space between the heading and text
+    grid-column-gap: 2.5rem; //creates space between the icons and text
+
+    &__icon {
+        fill: $color-primary; //change icon colors
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem); //places icons slightly above heading
+    }
+
+    &__text {
+        font-size:1.7rem;
+    }
+}
